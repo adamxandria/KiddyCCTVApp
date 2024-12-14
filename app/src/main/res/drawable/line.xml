@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Rectangle 1 -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/yellow_200" />
+            <size android:width="500dp" android:height="30dp" />
+        </shape>
+    </item>
+
+    <!-- Rectangle 2, you can adjust the android:top to position it relative to Rectangle 1 -->
+    <item android:top="60dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#FBF5F2" /> <!-- Replace with your color -->
+            <size android:width="500dp" android:height="70dp" />
+        </shape>
+    </item>
+</layer-list>

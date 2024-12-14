@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">Kiddy CCTV</string>
+    <string name="email">Email</string>
+    <string name="stafflogin">School Staff Login</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="already_have_an_account_login">Already have an account? Login</string>
+    <string name="conversation_name">Conversation Name</string>
+    <string name="kids_activities">Kids Activities</string>
+    <string name="invoicepayments">Invoice &amp; Payments </string>
+    <string name="upload">Take Picture</string>
+    <string name="messagenotif">Message</string>
+    <string name="teacherincharge">Teacher In-Charge </string>
+    <string name="close">Close </string>
+     <string name="greeting">Hi %1$s, %2$s</string>
+    <string name="today_date">Today, %1$s</string>
+    <string name="admin_icon">%1$s</string>
+    <string name="add_new_admin">Add New User</string>
+    <string name="invoice_icon">Invoice icon</string>
+    <string name="paid">Paid</string>
+    <string name="late">Late</string>
+    <string name="pending">Pending</string>
+    <string name="invoice_title">Invoice %s</string>
+    <string name="invoice_amount_format">Amount: %s</string>
+    <string name="invoice_amount">$%1$.2f</string>
+    <string name="credit_card_icon">Credit Card Icon</string>
+
+    <!-- Principal Account -->
+    <string name="add_users">Add new Users</string>
+    <string name="manage_admins">Principals</string>
+    <string name="manage_parents">Parents</string>
+    <string name="manage_teachers">Teachers</string>
+    <string name="manage_children">Children</string>
+    <string name="user_name">%s</string>
+    <string name="user_email">%s</string>
+    <string name="user_role">%s</string>
+    <string name="user_profileImg">%s</string>
+    <string name="user_password">%s</string>
+    <string-array name="role_options">
+        <item>Children</item>
+        <item>Parent</item>
+        <item>Principal</item>
+        <item>Teacher</item>
+    </string-array>
+    <string-array name="gender_options">
+        <item>Female</item>
+        <item>Male</item>
+    </string-array>
+
+</resources>
+ 
+

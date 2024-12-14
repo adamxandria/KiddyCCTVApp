@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/createAccount"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FBF5F2">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="345dp"
+        android:layout_height="347dp"
+        android:translationX="25dp"
+        android:translationY="120dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.238"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/children" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@android:style/Widget.Button"
+        android:background="@drawable/round_btn"
+        android:id="@+id/logBtn"
+        android:layout_width="198dp"
+        android:layout_height="50dp"
+        android:textSize="17dp"
+        android:text="@string/login"
+        android:textColor="#1D1617"
+        android:translationX="100dp"
+        android:translationY="531dp"
+        android:fontFamily="@font/poppin_semibold"
+        app:backgroundTint="#FFC248"
+        app:iconTint="#1D1617"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="556dp" />
+
+    <TextView
+        android:id="@+id/StaffView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppin_semibold"
+        android:text= "Staff Login"
+        android:textColor="#FFC248"
+        android:textSize="17sp"
+        android:translationX="155dp"
+        android:translationY="600dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="617dp" />
+</RelativeLayout>

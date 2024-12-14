@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal"
+        android:background="@color/yellow_200">
+        <ImageView
+            android:id="@+id/ivBackArrow"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/back_arrow"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="50dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chats"
+            android:fontFamily="@font/poppins_bold"
+            android:textSize="17dp"
+            android:layout_marginLeft="140dp"
+            android:layout_marginTop="50dp">
+
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutAddParticipant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="120dp"
+        android:background="#FFF"
+        android:orientation="horizontal"
+        android:padding="8dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/addParticipantTextInputEditText"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Search for name"
+            android:inputType="text"
+            android:lines="1"
+            android:maxLength="20"
+            android:textColor="#778293"
+            />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="190dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/addParticipantButton"
+            style="@android:style/Widget.Button"
+            android:layout_width="170dp"
+            android:layout_height="50dp"
+            android:background="@drawable/round_btn"
+            android:fontFamily="@font/poppin_semibold"
+            android:text="Search Recipients"
+
+            android:textSize="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.026" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/createGroupButton"
+            style="@android:style/Widget.Button"
+            android:layout_width="170dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="404dp"
+            android:background="@drawable/round_btn"
+            android:fontFamily="@font/poppin_semibold"
+            android:text="Create group"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addParticipantButton" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewConversations"
+            android:layout_width="390dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="280dp"
+            android:clipToPadding="false"
+            android:padding="8dp"
+            android:scrollbars="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="1dp" />
+
+
+    <LinearLayout
+        android:id="@+id/layoutGroupName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#FFF"
+        android:layout_marginTop="580dp"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/groupNameInputEditText"
+            android:layout_width="375dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Enter Group Name"
+            android:inputType="text"
+            android:lines="1"
+            android:maxLength="20"
+            android:textColor="#778293" />
+    </LinearLayout>
+
+
+<!--        <Button-->
+<!--            android:id="@+id/createGroupButton"-->
+<!--            android:layout_width="378dp"-->
+<!--            android:layout_marginLeft="5dp"-->
+<!--            android:layout_marginTop="650dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Create group" />-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="190dp"
+        app:layout_anchor="@+id/constraintLayout4"
+        app:layout_anchorGravity="center">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_gravity="bottom"
+        app:fabCradleMargin="10dp"
+        app:fabCradleRoundedCornerRadius="10dp"
+        app:fabCradleVerticalOffset="10dp">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/transparent_background"
+            app:menu="@menu/bottom_nav_menu" />
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

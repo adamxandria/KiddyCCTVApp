@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CustomTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <!-- Border thickness when unfocused -->
+        <item name="boxStrokeWidth">4dp</item> <!-- Adjust this value as needed -->
+
+        <!-- Border thickness when focused -->
+        <item name="boxStrokeWidthFocused">3dp</item> <!-- Adjust this value as needed -->
+    </style>
+
+</resources>

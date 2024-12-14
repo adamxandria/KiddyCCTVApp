@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "240146693542",
+    "firebase_url": "https://mobile-security-1b330-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "mobile-security-1b330",
+    "storage_bucket": "mobile-security-1b330.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:240146693542:android:528ab4754970e7d4afa367",
+        "android_client_info": {
+          "package_name": "mobilesecurity.sit.project"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWLQ5KYz_vOoCHhJOkHcFkD2z8WjbREjM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

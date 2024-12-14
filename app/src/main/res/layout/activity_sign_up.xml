@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#FBF5F2">
+
+
+<!--    BACK BUTTON-->
+    <ImageView
+        android:id="@+id/backImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/back_arrow"/>
+
+
+<!--TITLE-->
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Register Account"
+        android:textColor="@color/yellow_200"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+<!--NAME-->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/parentNameTextInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="180dp">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/parentNameTextInputEditText"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Name"
+            android:inputType="text"
+            android:lines="1"
+            android:maxLength="30"
+            android:textColor="#778293"
+
+
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+<!--    EMAIL-->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/signupEmailTextInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="250dp">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/signupEmailTextInputEditText"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+
+            android:fontFamily="@font/poppins_regular"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:lines="1"
+            android:maxLength="30"
+            android:textColor="#778293"
+
+
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+<!--    PASSWORD-->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/signupPassTextInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="320dp">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/signupPassTextInputEditText"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:lines="1"
+            android:maxLength="30"
+            android:textColor="#778293"
+
+
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+<!--CHILD ID-->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/childIdTextInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="390dp">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/childIdTextInputEditText"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Child ID"
+            android:inputType="text"
+            android:lines="1"
+            android:maxLength="30"
+            android:textColor="#778293"
+
+
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/uploadButton"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_button_background"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_marginTop="470dp"
+        android:layout_marginLeft="20dp"
+
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:src="@drawable/upload" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="40dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Upload Profile Image"
+
+            android:textSize="17dp" />
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/uploadImageView"
+        android:layout_marginTop="580dp"
+        android:layout_marginLeft="175dp"
+        tools:srcCompat="@tools:sample/avatars">
+    </ImageView>
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/registerButton"
+        style="@android:style/Widget.Button"
+        android:layout_width="198dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="105dp"
+        android:layout_marginTop="680dp"
+        android:background="@drawable/round_btn"
+        android:fontFamily="@font/poppin_semibold"
+        android:text="Sign Up"
+        android:textSize="17dp" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+
+
+

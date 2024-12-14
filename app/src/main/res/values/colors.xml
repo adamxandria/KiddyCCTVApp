@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="yellow_200">#FFC248</color>
+    <color name="background_color">#FFC248</color>
+    <color name="background_700">#1D1617</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="grey">#778293</color>
+    <color name="black">#1D1617</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="paid_color">#4CAF50</color> <!-- Green for paid invoices -->
+    <color name="late_fee_color">#F44336</color> <!-- Red for overdue invoices -->
+    <color name="pending_color">#FF9800</color> <!-- Orange for pending invoices -->
+</resources>

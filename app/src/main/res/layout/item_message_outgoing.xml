@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:gravity="end">
+
+    <TextView
+        android:id="@+id/textViewTimestampOutgoing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:textSize="12sp"
+        android:layout_marginTop="4dp"
+        android:paddingStart="0dp"
+        android:paddingEnd="5dp"
+        android:text="Timestamp"
+        android:fontFamily="@font/poppin_semibold"/>
+
+    <TextView
+        android:id="@+id/textViewMessageOutgoing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_message_outgoing"
+        android:padding="10dp"
+        android:text="Outgoing Message"
+        android:fontFamily="@font/poppins_regular"
+        android:textSize="16sp"/>
+
+</LinearLayout>
